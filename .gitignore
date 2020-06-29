@@ -1,0 +1,9 @@
+/build
+/dist
+/node_modules
+/.sass-cache
+/.cache
+/.vscode
+myports.txt
+package-lock.json
+yarn.lock
