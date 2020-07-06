@@ -27,16 +27,6 @@ html, body {
   width: 100%;
 }
 
-section {
-  height: 100vh;
-}
-
-.flex {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
 #container {
   display: flex;
@@ -52,6 +42,11 @@ section {
   margin-right: -4vw;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: unset;
+}
 
 .l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8, .l9 {
   font-family: moon;
@@ -108,87 +103,3 @@ section {
 }
 
 
-// Navigation
-
-nav {
-  left: 0;
-  color: #fff;
-  position: absolute;
-  background: #1b242f;
-  border-bottom: 3px solid #F0130B;
-  height: 50px;
-  text-align: left;
-  width: 100%;
-  z-index: 99;
-}
-nav.fixed {
-  bottom: inherit;
-  left: 0;
-  position: fixed;
-  top: 0;
-}
-nav.fixed.desk {
-  animation: popDown 0.5s;
-}
-nav .nav-wrapper {
-  background: #333;
-  height: 0;
-  max-width: 1200px;
-  overflow: hidden;
-  position: absolute;
-  top: 53px;
-  transition: height 0.3s ease-out;
-  width: 100%;
-}
-nav .nav-wrapper.visible {
-  height: 220px;
-}
-nav .nav-wrapper div {
-  cursor: pointer;
-  font-size: 12pt;
-  padding: 12px 20px;
-  text-transform: uppercase;
-  transition: color 0.5s;
-}
-nav .nav-wrapper div:first-child {
-  padding: 25px 20px 12px 20px;
-}
-nav .nav-wrapper div:hover {
-  color: #FED128;
-}
-nav .hamburger-menu {
-  font-size: 30pt;
-  line-height: 36pt;
-  margin: auto 0;
-  position: absolute;
-  right: 5vw;
-  top: 0;
-}
-nav .active {
-  color: #FED128;
-}
-
-@media screen and (min-width: 600px) {
-  nav .nav-wrapper {
-    background: none;
-    height: initial;
-    overflow: visible;
-    position: initial;
-    text-align: left;
-  }
-  nav .nav-wrapper .visible {
-    height: initial;
-  }
-  nav .nav-wrapper div {
-    display: inline;
-    font-size: initial;
-    margin: 0 20px;
-    padding: initial;
-  }
-  nav .nav-wrapper div:first-child {
-    padding: 0;
-  }
-  nav .hamburger-menu {
-    display: none;
-  }
-}
