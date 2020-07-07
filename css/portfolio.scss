@@ -23,6 +23,8 @@ html, body {
 
 section {
   height: 100vh;
+  background-color: white;
+  border-bottom: 1px solid black;
 }
 
 .flex {
@@ -90,7 +92,7 @@ section {
 
 #home {
   background: url(../images/bg.png);
-  background-color: transparent;
+  background-color: black;
   background-size: cover;
 }
 

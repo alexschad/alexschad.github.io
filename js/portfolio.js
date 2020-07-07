@@ -56,6 +56,12 @@
     checkNav();
   }
 
+  const clickNav = (e) => {
+    const targetId = e.target.dataset.target;
+    const targetEl = document.getElementById(targetId);
+    scrollTo(document.documentElement, targetEl.offsetTop, 600);
+  }
+
   const init = () => {
     navBar = document.querySelector('nav');
     positionFromTop = navBar.offsetTop;
@@ -67,6 +73,10 @@
     downButton.onclick = () => {
       scrollTo(document.documentElement, about.offsetTop, 600);
     };
+    document.querySelectorAll('.nav-link').forEach(n => {
+        n.onclick = clickNav;
+      }
+    );
     checkVisible();
   };
 
