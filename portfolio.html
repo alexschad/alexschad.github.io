@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sixtyfive</title>
+  <script src="./js/portfolio.js"></script>
   <link rel="stylesheet" href="/css/portfolio.scss">
   <link rel="stylesheet" href="/css/fontawesome-all.min.css">
 </head>
 <body>
-  <section class="home">
+  <section id="home">
     <div class="container flex">
       <div class="text">
         <div class="text-bounce-right">
@@ -21,8 +22,9 @@
           I love to build great looking web interfaces.
         </div>
       </div>
-      <div class="button grow fas fa-arrow-down"></div>
+      <div id="down-button" class="button grow fas fa-arrow-down"></div>
     </div>
+    </section>
     <nav class="flex">
       <div class="nav-wrapper">
         <div class="nav-link active" dest="home">home</div>
@@ -32,9 +34,9 @@
       </div>
       <i class="hamburger-menu"></i>
     </nav>
-    </section>
-  <section id="about">
-
+  <section id="about" class="flex">
+    <h1 class="hidden" data-cssclass="text-bounce-right">About</h1>
+    <div class="hidden header-underline delay" data-cssclass="text-bounce-right" />
   </section>
   <section id="work">
 
