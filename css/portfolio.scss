@@ -42,6 +42,22 @@ section {
   width: 50vw;
 }
 
+.text-bounce-right,
+.text-bounce-left {
+  opacity: 0;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  animation-duration: 0.6s;
+}
+
+.text-bounce-right {
+  animation-name: text-bounce-right;
+}
+
+.text-bounce-left {
+  animation-name: text-bounce-left;
+}
+
 .name {
   display: inline;
   color: aqua;
@@ -52,7 +68,7 @@ section {
 
 .button {
    color: wheat;
-    font-size: 3em;
+    font-size: 3rem;
     margin-top: 1em;
     border: 3px solid wheat;
     padding: 15px;
@@ -67,6 +83,53 @@ section {
 .home {
   background: url(../images/bg.png);
   background-color: transparent;
+}
+
+@keyframes text-bounce-right {
+  0% {
+    opacity: .2;
+    transform: translateX(-200px);
+  }
+  60% {
+    opacity: .7;
+    transform: translateX(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes text-bounce-left {
+  0% {
+    opacity: .2;
+    transform: translateX(200px);
+  }
+  60% {
+    opacity: .7;
+    transform: translateX(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes button-bounce-rotate {
+  0% {
+    opacity: .2;
+    transform: perspective(800px) rotateX(-80deg);
+  }
+  20% {
+    opacity: 1;
+  }
+  60% {
+    transform: perspective(800px) rotateX(20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(800px) rotateX(0);
+  }
 }
 
 // Navigation
