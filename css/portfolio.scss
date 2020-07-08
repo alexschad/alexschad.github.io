@@ -180,6 +180,8 @@ nav.fixed {
   animation: scrollIn 0.5s;
 }
 nav .nav-wrapper {
+  display: flex;
+  justify-content: center;
   background: #333;
   height: 0;
   max-width: 1200px;

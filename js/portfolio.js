@@ -4,6 +4,7 @@
   let navBar;
   let lastPos;
   let positionFromTop;
+  const sections = [];
   
   //  let offset = navBar.offsetTop;
   // const navrect = navBar.getBoundingClientRect();
@@ -47,13 +48,30 @@
       navBar.classList.remove('fixed');
     }
     lastPos = pos;
+  }
 
+  const checkActiveSection = () => {
+    const height = navBar.getBoundingClientRect().height;
+    let activeSection;
+    sections.forEach(s => {
+      if (s.getBoundingClientRect().y - height <= 0) {
+        activeSection = s;
+      }
+    });
+    const activeNav = document.querySelector(`.nav-link[data-target='${activeSection.id}']`);
+
+    if (!activeNav.classList.contains('active')) {
+      const oldActive = document.querySelector('.nav-link.active');
+      oldActive && oldActive.classList.remove('active');
+      activeNav.classList.add('active');
+    }
   }
 
   const onScroll = () => {
     // do this when the window scrolls
     checkVisible();
     checkNav();
+    checkActiveSection();
   }
 
   const clickNav = (e) => {
@@ -63,11 +81,11 @@
   }
 
   const init = () => {
+    const downButton = document.getElementById('down-button');
     navBar = document.querySelector('nav');
     positionFromTop = navBar.offsetTop;
     elements = document.querySelectorAll('.hidden');
     windowHeight = window.innerHeight;
-    const downButton = document.getElementById('down-button');
     about = document.getElementById('about');
     window.addEventListener('scroll', onScroll);
     downButton.onclick = () => {
@@ -77,6 +95,7 @@
         n.onclick = clickNav;
       }
     );
+    document.querySelectorAll('section').forEach(s => {sections.push(s)});
     checkVisible();
   };
 
