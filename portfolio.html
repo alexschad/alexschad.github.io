@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sixtyfive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Alexander Schad -  a web developer</title>
   <script src="./js/portfolio.js"></script>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/portfolio.scss">
   <link rel="stylesheet" href="/css/fontawesome-all.min.css">
 </head>
@@ -13,13 +14,10 @@
     <div class="container flex">
       <div class="text">
         <div class="text-bounce-right">
-         Hi, my name is <div class="name">Alexander Schad</div>.
+         I'm <div class="name">Alex</div>.
         </div>
         <div class="text-bounce-left">
-          I'm a fullstack developer based in Berlin.
-        </div>
-        <div class="text-bounce-right">
-          I love to build great looking web interfaces.
+          A web developer.
         </div>
       </div>
       <div id="down-button" class="button grow fas fa-arrow-down"></div>
@@ -29,6 +27,7 @@
       <div class="nav-wrapper">
         <div class="nav-link active" data-target="home">home</div>
         <div class="nav-link"  data-target="about">about</div>
+        <div class="nav-link"  data-target="skills">skills</div>
         <div class="nav-link"  data-target="work">work</div>
         <div class="nav-link"  data-target="contact">contact</div>
       </div>
@@ -36,6 +35,23 @@
     </nav>
   <section id="about" class="flex">
     <h1 class="hidden" data-cssclass="text-bounce-right">About</h1>
+    <div class="hidden header-underline delay" data-cssclass="text-bounce-right"></div>
+    <div class="container">
+      <div class="row">
+      <div class="col-md-8 hidden" data-cssclass="text-bounce-right">
+        <img src="/images/laptop3.jpg" alt="">
+      </div>
+      <div class="col-md-4 hidden" data-cssclass="text-bounce-left">
+        <h1>Alexander Schad</h1>
+        <p>I am a seasoned software expert with over 20 Years of working experience. I have done work in software development, front- and back-end web, mobile app creation and database/server management.</p>
+        <p>Currently i'm working as a full-stack developer for Vanguardistas, L.L.C., based in Berlin, Germany. </p>
+        <p>I love to code and i have serious passion for creating intuitive, dynamic user experiences. My curiosity for new technologies has always driven me to research and learn new things.</p> 
+      </div>
+    </div>
+    </div>
+  </section>
+  <section id="skills" class="flex">
+    <h1 class="hidden" data-cssclass="text-bounce-right">Skills</h1>
     <div class="hidden header-underline delay" data-cssclass="text-bounce-right" />
   </section>
   <section id="work" class="flex">

@@ -3,6 +3,7 @@
   padding: 0;
 }
 
+
 @font-face {
   font-family: 'Bangers';
   src: url('../Bangers-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
@@ -34,11 +35,18 @@ section {
   justify-content: center;
 }
 
-.container {
-  justify-content: center;
+.flex-row {
   align-items: center;
-  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
+
+// .container {
+//   justify-content: center;
+//   align-items: center;
+//   height: 100%;
+// }
 
 .text {
   font-family: Bangers;
@@ -97,10 +105,37 @@ section {
 }
 
 #about {
-  background-color: white;
+  background-size: 300%;
+  background-image: linear-gradient(45deg, #F6FEDB, #E6D3A3, #D8D174);
+  animation: bg-animation 25s infinite;
+}
+
+#skills {
+  background-size: 300%;
+  background-image: linear-gradient(45deg, #AA767C, #D6A184, #FFA686);
+  animation: bg-animation 25s infinite;
+}
+
+#work {
+  background-size: 300%;
+  background-image: linear-gradient(45deg, #CEE5F2, #ACCBE1, #7C98B3);
+  animation: bg-animation 25s infinite;
+}
+
+#contact {
+  background-size: 300%;
+  background-image: linear-gradient(45deg, #BBE1C3, #A7CDBD, #869D7A);
+  animation: bg-animation 25s infinite;
+}
+
+@keyframes bg-animation {
+  0% {background-position: left}
+  50% {background-position: right}
+  100% {background-position: left}
 }
 
 h1 {
+  font-family: 'Raleway', sans-serif;
   font-size: 3rem;
   color: black;
 }
@@ -108,7 +143,7 @@ h1 {
 .header-underline {
   background: black;
   height: 4px;
-  margin: 15px 0;
+  margin: 15px 0 100px 0;
   width: 70px;
 }
 
@@ -248,4 +283,9 @@ nav .active {
   0% {
     transform: translateY(-100px);
   }
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
 }
