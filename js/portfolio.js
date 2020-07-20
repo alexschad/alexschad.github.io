@@ -23,18 +23,40 @@
     }
   }
 
-  const scrollTo = (element, to, duration) => {
-    // scroll an element to the top of another element in a duration
-    if (duration <= 0) return;
-    var difference = to - element.scrollTop;
-    var perTick = difference / duration * 10;
+Math.inOutQuintic = function(t, b, c, d) {
+  var ts = (t/=d)*t,
+  tc = ts*t;
+  return b+c*(6*tc*ts + -15*ts*ts + 10*tc);
+};
 
-    setTimeout(function() {
-        element.scrollTop = element.scrollTop + perTick;
-        if (element.scrollTop === to) return;
-        scrollTo(element, to, duration - 10);
-    }, 10);
-  }
+// requestAnimationFrame for Smart Animating http://goo.gl/sx5sts
+var requestAnimFrame = (function(){
+  return  window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function( callback ){ window.setTimeout(callback, 1000 / 60); };
+})();
+
+function scrollTo(element, to, duration) {
+  const start = element.scrollTop;
+  const change = to - start;
+  const increment = 20;
+  let currentTime = 0;
+  duration = (typeof(duration) === 'undefined') ? 500 : duration;
+  const animateScroll = function() {
+    // increment the time
+    currentTime += increment;
+    // find the value with the quadratic in-out easing function
+    const val = Math.inOutQuintic(currentTime, start, change, duration);
+    element.scrollTop = val;
+
+    // do the animation unless its over
+    if (currentTime < duration) {
+      requestAnimFrame(animateScroll);
+    }
+  };
+  animateScroll();
+}
+
+
+
 
   const checkNav = () => {
     // check if the navigation has reached the top then add the fixed class
@@ -77,7 +99,7 @@
   const clickNav = (e) => {
     const targetId = e.target.dataset.target;
     const targetEl = document.getElementById(targetId);
-    scrollTo(document.documentElement, targetEl.offsetTop, 600);
+    scrollTo(document.documentElement, targetEl.offsetTop, 300);
   }
 
   const init = () => {
@@ -89,7 +111,7 @@
     about = document.getElementById('about');
     window.addEventListener('scroll', onScroll);
     downButton.onclick = () => {
-      scrollTo(document.documentElement, about.offsetTop, 600);
+      scrollTo(document.documentElement, about.offsetTop, 300);
     };
     document.querySelectorAll('.nav-link').forEach(n => {
         n.onclick = clickNav;

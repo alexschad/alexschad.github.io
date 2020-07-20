@@ -98,6 +98,10 @@ section {
   background: wheat;
 }
 
+.row {
+  justify-content: center;
+}
+
 #home {
   background: url(../images/bg.png);
   background-color: black;
@@ -114,6 +118,20 @@ section {
   background-size: 300%;
   background-image: linear-gradient(45deg, #AA767C, #D6A184, #FFA686);
   animation: bg-animation 25s infinite;
+}
+
+#skills img {
+  width: 100px;
+}
+
+.skill {
+  margin: 15px;
+}
+
+.img-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 #work {
