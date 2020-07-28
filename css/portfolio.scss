@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+:root{
+	--borderColor:#c1c1c1;
+}
+
 
 @font-face {
   font-family: 'Bangers';
@@ -23,7 +27,7 @@ html, body {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
   background-color: white;
   border-bottom: 1px solid black;
 }
@@ -106,6 +110,7 @@ section {
   background: url(../images/bg.png);
   background-color: black;
   background-size: cover;
+  height: 100vh;
 }
 
 #about {
@@ -138,6 +143,48 @@ section {
   background-size: 300%;
   background-image: linear-gradient(45deg, #CEE5F2, #ACCBE1, #7C98B3);
   animation: bg-animation 25s infinite;
+}
+
+.work {
+  justify-content: start;
+  margin-top: 10px;
+}
+
+.work:hover {
+  transform: scale(1.02);
+}
+
+.work-wrapper {
+  padding: 15px;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  background: aliceblue;
+	border-radius:5px;
+	border:1px solid var(--borderColor);
+	-webkit-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+	-moz-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+	box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+}
+
+.workfor {
+  font-weight: 700;
+}
+
+.logo {
+  max-height: 200px;
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  margin: 15px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #contact {
