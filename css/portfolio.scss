@@ -181,6 +181,10 @@ section {
   margin: 15px;
 }
 
+.logo > img {
+  max-height: 200px;
+}
+
 .detail {
   display: flex;
   flex-direction: column;
@@ -208,7 +212,7 @@ h1 {
 .header-underline {
   background: black;
   height: 4px;
-  margin: 15px 0 100px 0;
+  margin: 15px 0 20px 0;
   width: 70px;
 }
 
