@@ -5,18 +5,18 @@
 
 :root{
   --borderColor:#c1c1c1;
-  --color1-1: #7bdff2;
-  --color1-2: #6edaf0;
-  --color1-3: #64def7;
-  --color2-1: #b2f7ef;
-  --color2-2: #93ddd6;
-  --color2-3: #7ec9c0;
-  --color3-1: #eff7f6;
-  --color3-2: #c3faf4;
-  --color3-3: #7cfaeb;
-  --color4-1: #f2ffe0;
-  --color4-2: #dffaba;
-  --color4-3: #cef893;
+  --color1-1: white;
+  --color1-2: white;
+  --color1-3: white;
+  --color2-1: white;
+  --color2-2: white;
+  --color2-3: white;
+  --color3-1: white;
+  --color3-2: white;
+  --color3-3: white;
+  --color4-1: white;
+  --color4-2: white;
+  --color4-3: white;
 }
 
 
@@ -42,6 +42,7 @@ section {
   min-height: 100vh;
   background-color: white;
   border-bottom: 1px solid black;
+  background-color: #efefef;
 }
 
 .container {
@@ -131,13 +132,13 @@ section {
 
 #about {
   background-size: 300%;
-  background-image: linear-gradient(45deg, var(--color1-1), var(--color1-2), var(--color1-3));
+  // background-image: linear-gradient(45deg, var(--color1-1), var(--color1-2), var(--color1-3));
   animation: bg-animation 25s infinite;
 }
 
 .about-container {
     justify-content: center;
-    background: #dcfdfb;
+    // background: #dcfdfb;
     padding: 40px;
     align-items: center;
     border-radius: 5px;
@@ -155,7 +156,7 @@ section {
 
 #skills {
   background-size: 300%;
-  background-image: linear-gradient(45deg, var(--color2-1), var(--color2-2), var(--color2-3));
+  // background-image: linear-gradient(45deg, var(--color2-1), var(--color2-2), var(--color2-3));
   animation: bg-animation 25s infinite;
 }
 
@@ -171,12 +172,13 @@ section {
 
 #work {
   background-size: 300%;
-  background-image: linear-gradient(45deg, var(--color3-1), var(--color3-2), var(--color3-3));
+  // background-image: linear-gradient(45deg, var(--color3-1), var(--color3-2), var(--color3-3));
   animation: bg-animation 25s infinite;
 }
 
 .skill,
 .work {
+  min-height: 300px;
   justify-content: start;
   margin-top: 10px;
 }
@@ -188,6 +190,9 @@ section {
 
 .skill-wrapper,
 .work-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 200px;
   padding: 15px;
   flex-direction: column;
   display: flex;
@@ -203,7 +208,7 @@ section {
 }
 
 .skill-wrapper {
-  width: 200px;
+  min-width: 200px;
 }
 
 .skill-wrapper > img {
@@ -244,14 +249,61 @@ section {
 }
 
 .detail {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  height: fit-content;
+  width: fit-content;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: white;
+  border-radius:5px;
+  padding: 15px;
+	border:1px solid var(--borderColor);
+	-webkit-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+	-moz-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+	box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+}
+
+.work:hover {
+  // transform: scale(1.3);
+  z-index: 2;
+  .logo {
+    opacity: 0;
+  }
+  .detail {
+    opacity: 1;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.tag {
+  background-color: #35679e;
+  color: white;
+  margin: .2em .2em;
+  padding: 1px 10px;
+  border-radius: 10px;
 }
 
 #contact {
   background-size: 300%;
-  background-image: linear-gradient(45deg, var(--color4-1), var(--color4-2), var(--color4-3));
+  // background-image: linear-gradient(45deg, var(--color4-1), var(--color4-2), var(--color4-3));
   animation: bg-animation 25s infinite;
 }
 
