@@ -333,6 +333,9 @@ section > h1 {
 
 .social-media p {
   margin-top: 2em;
+  white-space: nowrap;
+}
+.social-media p a {
   font-size: 18px;
   line-height: 1.4;
   color: #777;
