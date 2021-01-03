@@ -140,6 +140,10 @@ section {
   animation: bg-animation 25s infinite;
 }
 
+section > h1 {
+  margin-top: 20px;
+}
+
 .about-container {
   justify-content: center;
   // background: #dcfdfb;
