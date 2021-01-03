@@ -3,8 +3,8 @@
   padding: 0;
 }
 
-:root{
-  --borderColor:#c1c1c1;
+:root {
+  --borderColor: #c1c1c1;
   --color1-1: white;
   --color1-2: white;
   --color1-3: white;
@@ -19,13 +19,13 @@
   --color4-3: white;
 }
 
-
 @font-face {
   font-family: 'Bangers';
   src: url('../Bangers-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-}  
+}
 
-html, body {
+html,
+body {
   background-color: black;
   display: table;
   height: 100%;
@@ -102,16 +102,20 @@ section {
   color: aqua;
 }
 
-.grow { transition: all .2s ease-in-out; }
-.grow:hover { transform: scale(1.1); }
+.grow {
+  transition: all 0.2s ease-in-out;
+}
+.grow:hover {
+  transform: scale(1.1);
+}
 
 .button {
-   color: wheat;
-    font-size: 3rem;
-    margin-top: 1em;
-    border: 3px solid wheat;
-    padding: 15px;
-    border-radius: 50%;
+  color: wheat;
+  font-size: 3rem;
+  margin-top: 1em;
+  border: 3px solid wheat;
+  padding: 15px;
+  border-radius: 50%;
 }
 
 .button:hover {
@@ -137,17 +141,17 @@ section {
 }
 
 .about-container {
-    justify-content: center;
-    // background: #dcfdfb;
-    padding: 40px;
-    align-items: center;
-    border-radius: 5px;
-    border:1px solid var(--borderColor);
-    -webkit-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
-    -moz-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
-    box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
-    transition: all .2s ease-in-out;
-    overflow: hidden;
+  justify-content: center;
+  // background: #dcfdfb;
+  padding: 40px;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid var(--borderColor);
+  -webkit-box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
 }
 
 .about-container:hover {
@@ -200,11 +204,11 @@ section {
   align-items: center;
   height: 100%;
   background: white;
-	border-radius:5px;
-	border:1px solid var(--borderColor);
-	-webkit-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
-	-moz-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
-	box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+  border-radius: 5px;
+  border: 1px solid var(--borderColor);
+  -webkit-box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
 }
 
 .skill-wrapper {
@@ -263,12 +267,12 @@ section {
   flex-direction: column;
   justify-content: center;
   background-color: white;
-  border-radius:5px;
+  border-radius: 5px;
   padding: 15px;
-	border:1px solid var(--borderColor);
-	-webkit-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
-	-moz-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
-	box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+  border: 1px solid var(--borderColor);
+  -webkit-box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
 }
 
 .work:hover {
@@ -296,7 +300,7 @@ section {
 .tag {
   background-color: #35679e;
   color: white;
-  margin: .2em .2em;
+  margin: 0.2em 0.2em;
   padding: 1px 10px;
   border-radius: 10px;
 }
@@ -308,9 +312,15 @@ section {
 }
 
 @keyframes bg-animation {
-  0% {background-position: left}
-  50% {background-position: right}
-  100% {background-position: left}
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
 }
 
 h1 {
@@ -328,11 +338,11 @@ h1 {
 
 @keyframes text-bounce-right {
   0% {
-    opacity: .2;
+    opacity: 0.2;
     transform: translateX(-200px);
   }
   60% {
-    opacity: .7;
+    opacity: 0.7;
     transform: translateX(15px);
   }
   100% {
@@ -343,11 +353,11 @@ h1 {
 
 @keyframes text-bounce-left {
   0% {
-    opacity: .2;
+    opacity: 0.2;
     transform: translateX(200px);
   }
   60% {
-    opacity: .7;
+    opacity: 0.7;
     transform: translateX(-15px);
   }
   100% {
@@ -358,7 +368,7 @@ h1 {
 
 @keyframes button-bounce-rotate {
   0% {
-    opacity: .2;
+    opacity: 0.2;
     transform: perspective(800px) rotateX(-80deg);
   }
   20% {
@@ -380,7 +390,7 @@ nav {
   color: #fff;
   position: absolute;
   background: #1b242f;
-  border-bottom: 3px solid #F0130B;
+  border-bottom: 3px solid #f0130b;
   height: 50px;
   text-align: left;
   width: 100%;
@@ -419,7 +429,7 @@ nav .nav-wrapper div:first-child {
   padding: 25px 20px 12px 20px;
 }
 nav .nav-wrapper div:hover {
-  color: #FED128;
+  color: #fed128;
 }
 nav .hamburger-menu {
   font-size: 30pt;
@@ -430,7 +440,7 @@ nav .hamburger-menu {
   top: 0;
 }
 nav .active {
-  color: #FED128;
+  color: #fed128;
 }
 
 @media screen and (min-width: 600px) {
