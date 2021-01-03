@@ -315,6 +315,29 @@ section > h1 {
   animation: bg-animation 25s infinite;
 }
 
+.social-media {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  // margin: 20px;
+  // display: flex;
+  // line-height: -1;
+}
+
+.social-media img {
+  width: 100px;
+  // margin: 10px 0;
+  // display: flex;
+  // line-height: -1;
+}
+
+.social-media p {
+  margin-top: 2em;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #777;
+}
+
 @keyframes bg-animation {
   0% {
     background-position: left;
