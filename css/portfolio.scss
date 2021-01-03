@@ -329,7 +329,8 @@ section > h1 {
 
 h1 {
   font-family: 'Raleway', sans-serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-weight: bold;
   color: black;
 }
 
@@ -337,7 +338,7 @@ h1 {
   background: black;
   height: 4px;
   margin: 15px 0 20px 0;
-  width: 70px;
+  width: 15em;
 }
 
 @keyframes text-bounce-right {
