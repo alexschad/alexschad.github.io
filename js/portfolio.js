@@ -100,6 +100,7 @@ function scrollTo(element, to, duration) {
     const targetId = e.target.dataset.target;
     const targetEl = document.getElementById(targetId);
     scrollTo(document.documentElement, targetEl.offsetTop, 300);
+    navBar.querySelector('.nav-wrapper').classList.remove('visible');
   }
 
   const init = () => {
@@ -118,6 +119,11 @@ function scrollTo(element, to, duration) {
       }
     );
     document.querySelectorAll('section').forEach(s => {sections.push(s)});
+
+    const hamburger = navBar.querySelector('a.icon');
+    hamburger.onclick = () => {
+      navBar.querySelector('.nav-wrapper').classList.toggle('visible');
+    };
     checkVisible();
   };
 

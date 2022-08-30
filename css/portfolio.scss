@@ -149,6 +149,7 @@ section > h1 {
   // background: #dcfdfb;
   padding: 40px;
   align-items: center;
+  font-size: 1.2em;
   border-radius: 5px;
   border: 1px solid var(--borderColor);
   -webkit-box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
@@ -160,6 +161,10 @@ section > h1 {
 
 .about-container:hover {
   transform: scale(1.005);
+}
+
+.about-container img {
+  margin: 0px 0px 10px 0px;
 }
 
 #skills {
@@ -325,7 +330,7 @@ section > h1 {
 }
 
 .social-media img {
-  width: 100px;
+  width: 150px;
   // margin: 10px 0;
   // display: flex;
   // line-height: -1;
@@ -339,6 +344,10 @@ section > h1 {
   font-size: 18px;
   line-height: 1.4;
   color: #777;
+}
+
+.fa-github {
+  color: #000000;
 }
 
 @keyframes bg-animation {
@@ -435,19 +444,17 @@ nav.fixed {
   animation: scrollIn 0.5s;
 }
 nav .nav-wrapper {
-  display: flex;
-  justify-content: center;
   background: #333;
   height: 0;
   max-width: 1200px;
   overflow: hidden;
   position: absolute;
-  top: 53px;
+  top: 50px;
   transition: height 0.3s ease-out;
   width: 100%;
 }
 nav .nav-wrapper.visible {
-  height: 220px;
+  height: 260px;
 }
 nav .nav-wrapper div {
   cursor: pointer;
@@ -462,14 +469,14 @@ nav .nav-wrapper div:first-child {
 nav .nav-wrapper div:hover {
   color: #fed128;
 }
-nav .hamburger-menu {
-  font-size: 30pt;
-  line-height: 36pt;
-  margin: auto 0;
+
+nav a.icon {
+  color: #ffffff;
   position: absolute;
-  right: 5vw;
-  top: 0;
+  right: 15px;
+  top: 8px;
 }
+
 nav .active {
   color: #fed128;
 }
@@ -494,7 +501,7 @@ nav .active {
   nav .nav-wrapper div:first-child {
     padding: 0;
   }
-  nav .hamburger-menu {
+  nav .icon {
     display: none;
   }
 }
