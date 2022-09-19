@@ -1,0 +1,1 @@
+{"version":3,"sources":["js/index.js"],"names":["console","log"],"mappings":";AAAAA,QAAQC,IAAI","file":"js.4121dbfc.js","sourceRoot":"..","sourcesContent":["console.log('hello');\n"]}
