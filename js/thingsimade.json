@@ -1,0 +1,74 @@
+[
+    {
+        "key": "mp",
+        "title": "Metropublisher (2010 - 2024)",
+        "image": "mp.png",
+        "details": "Metro Publisher is the CMS for magazine websites. Chosen by leading publications worldwide, Metro Publisher is the simplest way to build a feature-rich magazine website. Anyone on your staff can publish a variety of content types anytime, anywhere – no web developers required. MetroPublisher, is a state of the art SaaS platform for magazine and newspaper publishers. We allow our customers to add and edit their articles with an in browser editor that allows them to format and style their articles without the knowledge of html or css, while keeping the content structure stable and consistent.",
+        "workfor": "Vanguardistas LLC",
+        "tags": ["Postgres", "Python", "GraphQL", "React", "HTML5", "CSS3"]
+    },
+    {
+        "key": "lr",
+        "title": "Lovelyread (2018)",
+        "image": "lovelyread.png",
+        "details": "Lovelyread is be a monthly subscription service through which readers can discover some of the world’s best writing, sourced from independent publishers around the globe. The whole frontend is a single page application written in ReactJS. The data is stored in a Postgres Database hosted on Amazon's Relational Database Service. Both are connected by a GraphQL API. I have also developed a mobile app for both IOS and Android written in React Native.",
+        "workfor": "Vanguardistas LLC",
+        "tags": ["Postgres", "Python", "GraphQL", "React", "React Native", "HTML5", "CSS3"]
+    },
+    {
+        "key": "gobalgap",
+        "title": "GLOBALG.A.P. (2010 - 2014)",
+        "image": "gobalgap.png",
+        "details": "https://www.globalgap.org GLOBALG.A.P. is a trademark and a set of standards for good agricultural practices (G.A.P.). Development of multiple extranets to allow management of standards and the certification of remote companies as well as their public website. This project was built using Zope 2, Python and MySQL.",
+        "workfor": "beehive elektronsche Medien GmbH",
+        "tags": ["Zope 2", "Python", "MySQL", "HTML5", "CSS3"]
+    },
+    {
+        "key": "usn",
+        "title": "U.S. News & World Report (2011)",
+        "image": "usn.svg",
+        "details": "https://www.usnews.com Development of a custom content Management System for their website as well as a widget factory to create content widgets to display and filter information stored in backend. This project was built using Zope 2, Python and Postgres.",
+        "workfor": "beehive elektronsche Medien GmbH",
+        "tags": ["Zope 2", "Python", "Postgres", "HTML5", "CSS3"]
+    },
+    {
+        "key": "spse",
+        "title": "Sony Playstation Europe (2003)",
+        "image": "spse.png",
+        "details": "playstation.com Development of a modular content management system with unique release requirements.",
+        "workfor": "beehive elektronsche Medien GmbH",
+        "tags": ["Zope 2", "HTML", "CSS"]
+    },
+    {
+        "key": "skkoeln",
+        "title": "Stadtsparkasse Köln (2002)",
+        "image": "skkoeln.png",
+        "details": "sk-koeln.de Project lead and developer of content management and delivery system, security concept, online banking and stock portfolio systems.",
+        "workfor": "beehive elektronsche Medien GmbH",
+        "tags": ["Zope 2", "Python", "HTML", "CSS"]
+    },
+    {
+        "key": "zopebook1",
+        "title": "Zope Content Management und Web-Application-Server (2001)",
+        "image": "zopebook1.jpg",
+        "details": "Dpunkt Verlag GmbH, June 2001 ISBN: 3-932588-93-2",
+        "workfor": "beehive elektronsche Medien GmbH",
+        "tags": ["Zope 2"]
+    },
+    {
+        "key": "zopebook2",
+        "title": "The Book Of Zope - How to Build and Deliver Web Applications (2001)",
+        "image": "zopebook2.jpg",
+        "details": "No Starch Press, November 2001 ISBN: 1-886411-57-3",
+        "workfor": "beehive elektronsche Medien GmbH",
+        "tags": ["Zope 2"]
+    },
+    {
+        "key": "moz",
+        "title": "Märkische Oderzeitung (2000)",
+        "image": "moz.png",
+        "details": "moz.de Project lead for a content management system, unifying the newspaper’s online and print versions and interconnecting previously disjunct regional offices.",
+        "workfor": "beehive elektronsche Medien GmbH",
+        "tags": ["Zope 2", "Python", "MySQL", "HTML", "CSS"]
+    }
+]

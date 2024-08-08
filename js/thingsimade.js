@@ -1,0 +1,98 @@
+import React, { useState } from "react";
+import { createRoot } from "react-dom/client";
+import data from "./thingsimade.json";
+import images from "../images/*.*";
+
+function ThingsIMade() {
+  const [selectedTags, setSelectedTags] = useState([]);
+
+  let allTags = [];
+  data.forEach((d) => {
+    allTags = allTags.concat(d.tags);
+  });
+  allTags = new Set(allTags);
+  allTags = [...allTags];
+
+  const selectTag = (t) => {
+    return (e) => {
+      setSelectedTags((oldTags) => {
+        const newTags = [...oldTags];
+        const idx = newTags.indexOf(t);
+        if (idx === -1) {
+          newTags.push(t);
+        } else {
+          newTags.splice(idx, 1);
+        }
+        return newTags;
+      });
+    };
+  };
+
+  const allTagsRenderd = allTags.map((t) => {
+    return (
+      <div
+        className={`tag ${selectedTags.indexOf(t) > -1 ? "selected" : ""}`}
+        onClick={selectTag(t)}
+        key={t}
+      >
+        {t}
+      </div>
+    );
+  });
+
+  const itemsFilterd = data.filter((i) => {
+    return selectedTags.every((t) => i.tags.includes(t));
+  });
+
+  const items = itemsFilterd.map((d) => {
+    return (
+      <div className="work flex col-md-4" key={d.key}>
+        <div className="work-wrapper">
+          <div className="logo">
+            <img src={images[d.image.split(".")[0]][d.image.split(".")[1]]} />
+          </div>
+          <div className="detail">
+            <h4>{d.title}</h4>
+            {d.details}
+            <div className="workfor">{d.workfor}</div>
+            <div className="tags">
+              {d.tags.map((t) => (
+                <div
+                  className={`tag ${
+                    selectedTags.indexOf(t) > -1 ? "selected" : ""
+                  }`}
+                  onClick={selectTag(t)}
+                  key={t}
+                >
+                  {t}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  });
+  return (
+    <>
+      <div className="tags">{allTagsRenderd}</div>
+      <div className="row">{items}</div>
+    </>
+  );
+}
+
+function init() {
+  const domNode = document.getElementById("things-i-made");
+  const root = createRoot(domNode);
+  root.render(<ThingsIMade />);
+}
+
+const winLoad = (callback) => {
+  if (document.readyState === "complete") {
+    callback();
+  } else {
+    window.addEventListener("load", callback);
+  }
+};
+
+winLoad(init);
