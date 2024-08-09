@@ -46,7 +46,7 @@ section {
 }
 
 .container {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .flex {
@@ -301,7 +301,7 @@ section > h1 {
   flex-wrap: wrap;
   width: 100%;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   margin-top: 10px;
 }
 
@@ -510,12 +510,12 @@ nav .active {
 
   .detail {
     width: min(125%, 90vw);
-    min-height: 125%;
+    min-height: 105%;
   }
 
   .work:hover {
     .detail {
-      translate: -10% -10%;
+      translate: -10% -5%;
     }
   }
   
