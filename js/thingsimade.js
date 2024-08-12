@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
 import data from "./thingsimade.json";
 import images from "../images/*.*";
+import { motion } from "framer-motion";
 
 function ThingsIMade() {
   const [selectedTags, setSelectedTags] = useState([]);
