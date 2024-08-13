@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
 import data from "./thingsimade.json";
 import images from "../images/*.*";
+import { motion, AnimatePresence } from "framer-motion";
 
 function ThingsIMade() {
   const [selectedTags, setSelectedTags] = useState([]);
@@ -46,7 +47,20 @@ function ThingsIMade() {
 
   const items = itemsFilterd.map((d) => {
     return (
-      <div className="work flex col-md-4" key={d.key}>
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{
+          scale: 1,
+          transition: { delay: 0.5, type: "spring" },
+        }}
+        exit={{
+          opacity: 0,
+          transition: { delay: 0.5 },
+        }}
+        layout
+        className="work flex col-md-4"
+        key={d.key}
+      >
         <div className="work-wrapper">
           <div className="logo">
             <img src={images[d.image.split(".")[0]][d.image.split(".")[1]]} />
@@ -70,13 +84,15 @@ function ThingsIMade() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     );
   });
   return (
     <>
       <div className="tags">{allTagsRenderd}</div>
-      <div className="row">{items}</div>
+      <div className="row">
+        <AnimatePresence>{items}</AnimatePresence>
+      </div>
     </>
   );
 }

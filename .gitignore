@@ -3,6 +3,7 @@
 /node_modules
 /.sass-cache
 /.cache
+/.parcel-cache
 /.vscode
 myports.txt
 package-lock.json

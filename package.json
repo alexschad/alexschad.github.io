@@ -2,21 +2,26 @@
   "name": "sixtyfive",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel index.html",
     "build": "parcel build index.html",
     "start": "parcel index.html",
-    "build-for-git": "parcel build index.html --out-dir docs"
+    "build-for-git": "parcel build index.html --dist-dir docs"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel-bundler": "^1.12.4",
+    "@parcel/packager-raw-url": "^2.12.0",
+    "@parcel/resolver-glob": "^2.12.0",
+    "@parcel/transformer-sass": "^2.12.0",
+    "@parcel/transformer-webmanifest": "^2.12.0",
+    "process": "^0.11.10",
     "sass": "^1.26.5"
   },
   "dependencies": {
+    "framer-motion": "^11.3.24",
+    "parcel": "^2.12.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   }
