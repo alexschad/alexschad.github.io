@@ -7,13 +7,6 @@ import { motion, AnimatePresence } from "framer-motion";
 function ThingsIMade() {
   const [selectedTags, setSelectedTags] = useState([]);
 
-  let allTags = [];
-  data.forEach((d) => {
-    allTags = allTags.concat(d.tags);
-  });
-  allTags = new Set(allTags);
-  allTags = [...allTags];
-
   const selectTag = (t) => {
     return (e) => {
       setSelectedTags((oldTags) => {
@@ -29,7 +22,18 @@ function ThingsIMade() {
     };
   };
 
-  const allTagsRenderd = allTags.map((t) => {
+  const itemsFilterd = data.filter((i) => {
+    return selectedTags.every((t) => i.tags.includes(t));
+  });
+
+  let availableTags = [];
+  itemsFilterd.forEach((d) => {
+    availableTags = availableTags.concat(d.tags);
+  });
+  availableTags = new Set(availableTags);
+  availableTags = [...availableTags];
+
+  const availableTagsRenderd = availableTags.map((t) => {
     return (
       <div
         className={`tag ${selectedTags.indexOf(t) > -1 ? "selected" : ""}`}
@@ -39,10 +43,6 @@ function ThingsIMade() {
         {t}
       </div>
     );
-  });
-
-  const itemsFilterd = data.filter((i) => {
-    return selectedTags.every((t) => i.tags.includes(t));
   });
 
   const items = itemsFilterd.map((d) => {
@@ -89,7 +89,7 @@ function ThingsIMade() {
   });
   return (
     <>
-      <div className="tags">{allTagsRenderd}</div>
+      <div className="tags">{availableTagsRenderd}</div>
       <div className="row">
         <AnimatePresence>{items}</AnimatePresence>
       </div>
