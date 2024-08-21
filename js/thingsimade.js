@@ -66,7 +66,15 @@ function ThingsIMade() {
             <img src={images[d.image.split(".")[0]][d.image.split(".")[1]]} />
           </div>
           <div className="detail">
-            <h4>{d.title}</h4>
+            {d.url !== "" ? (
+              <h4>
+                <a href={d.url} target="_blank">
+                  {d.title}
+                </a>
+              </h4>
+            ) : (
+              <h4>{d.title}</h4>
+            )}
             {d.details}
             <div className="workfor">{d.workfor}</div>
             <div className="tags">
