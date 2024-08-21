@@ -76,7 +76,7 @@ function ThingsIMade() {
               <h4>{d.title}</h4>
             )}
             {d.details}
-            <div className="workfor">{d.workfor}</div>
+            <div className="workfor">Made for {d.workfor}</div>
             <div className="tags">
               {d.tags.map((t) => (
                 <div

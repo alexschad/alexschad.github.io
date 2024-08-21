@@ -18,6 +18,24 @@
         "tags": ["Typescript", "NextJS", "Postgres", "React", "Tailwind", "HTML5", "CSS3"]
     },
     {
+        "key": "mybookhistory",
+        "title": "My Book History App (2024)",
+        "url": "https://github.com/alexschad/MyBookHistory",
+        "image": "mybookhistory.png",
+        "details": "I like to read books and i always buy new books and sell or give away the ones i read already. But after a while i forgot which books i already knew. So i made an app to remember the books i have read. It scans the ISBN Code of a book and connects to a free online API to get some infor about it. So My Book History helps me to only buy new books i never read before.",
+        "workfor": "Alexander Schad",
+        "tags": ["Javascript", "React", "React Native", "IOS", "Android"]
+    },
+    {
+        "key": "fungoku",
+        "title": "FunGoKu (2023)",
+        "url": "https://github.com/vanguardistas/FunGoKu",
+        "image": "fungoku.png",
+        "details": "Sudokus are really fun but some of them are really hard. So i built an app that let's you scan a sudoku on a piece of paper. Then you can simply play it in the app or you can get hints to help you progress. You can even let the app solve the whole sudoku if you are really desperate or want to impress your friends :). The app also let's you play new sudokus on 3 different difficulty levels.",
+        "workfor": "Vanguardistas LLC",
+        "tags": ["Javascript", "React", "React Native", "IOS"]
+    },
+    {
         "key": "lr",
         "title": "Lovelyread (2018)",
         "url": "",
@@ -27,10 +45,10 @@
         "tags": ["Postgres", "Python", "GraphQL", "React", "React Native", "HTML5", "CSS3"]
     },
     {
-        "key": "gobalgap",
+        "key": "globalgap",
         "title": "GLOBALG.A.P. (2010 - 2014)",
-        "url": "",
-        "image": "gobalgap.png",
+        "url": "https://www.globalgap.org",
+        "image": "globalgap.png",
         "details": "https://www.globalgap.org GLOBALG.A.P. is a trademark and a set of standards for good agricultural practices (G.A.P.). Development of multiple extranets to allow management of standards and the certification of remote companies as well as their public website. This project was built using Zope 2, Python and MySQL.",
         "workfor": "beehive elektronsche Medien GmbH",
         "tags": ["Zope 2", "Python", "MySQL", "HTML5", "CSS3"]
