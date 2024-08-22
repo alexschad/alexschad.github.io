@@ -67,7 +67,10 @@ function ThingsIMade() {
       >
         <div className="work-wrapper">
           <div className="logo">
-            <img src={images[d.image.split(".")[0]][d.image.split(".")[1]]} />
+            <img
+              src={images[d.image.split(".")[0]][d.image.split(".")[1]]}
+              alt={d.title}
+            />
           </div>
           <div className="detail">
             {d.url !== "" ? (
