@@ -29,7 +29,15 @@ function ThingsIMade() {
     };
   };
 
-  const allTagsRenderd = allTags.map((t) => {
+  const itemsFilterd = data.filter((i) => {
+    return selectedTags.every((t) => i.tags.includes(t));
+  });
+
+  const allTagsFilterd = allTags.filter((t) =>
+    itemsFilterd.some((i) => i.tags.indexOf(t) >= 0)
+  );
+
+  const filterdTagsRenderd = allTagsFilterd.map((t) => {
     return (
       <div
         className={`tag ${selectedTags.indexOf(t) > -1 ? "selected" : ""}`}
@@ -39,10 +47,6 @@ function ThingsIMade() {
         {t}
       </div>
     );
-  });
-
-  const itemsFilterd = data.filter((i) => {
-    return selectedTags.every((t) => i.tags.includes(t));
   });
 
   const items = itemsFilterd.map((d) => {
@@ -97,7 +101,7 @@ function ThingsIMade() {
   });
   return (
     <>
-      <div className="tags">{allTagsRenderd}</div>
+      <div className="tags">{filterdTagsRenderd}</div>
       <div className="row">
         <AnimatePresence>{items}</AnimatePresence>
       </div>
