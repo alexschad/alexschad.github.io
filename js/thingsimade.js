@@ -74,13 +74,13 @@ function ThingsIMade() {
           </div>
           <div className="detail">
             {d.url !== "" ? (
-              <h4>
+              <h2>
                 <a href={d.url} target="_blank">
                   {d.title}
                 </a>
-              </h4>
+              </h2>
             ) : (
-              <h4>{d.title}</h4>
+              <h2>{d.title}</h2>
             )}
             {d.details}
             <div className="workfor">Made for {d.workfor}</div>
