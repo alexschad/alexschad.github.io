@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Alexander Schad - a web developer</title>
+    <meta name="description" content="My name is Alexander Schad. I am a seasoned software expert with over 20 Years of working experience. I have done work in software development, front- and back-end web, mobile app creation and database/server management.">
     <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="/favicon/site.webmanifest" />
-    <script src="./js/portfolio.js"></script>
-    <script src="./js/thingsimade.js" type="module"></script>
+    <script src="./js/portfolio.js" defer></script>
+    <script src="./js/thingsimade.js" type="module" defer></script>
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/portfolio.scss" />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
@@ -35,9 +36,9 @@
         <div class="nav-link" data-target="work">work</div>
         <div class="nav-link" data-target="contact">contact</div>
       </div>
-      <a href="javascript:void(0);" class="icon">
+      <div class="icon">
         <i class="fa fa-bars fa-2x"></i>
-      </a>
+      </div>
     </nav>
     <section id="about" class="flex py-5">
       <h1 class="hidden" data-cssclass="text-bounce-right">About me</h1>
@@ -45,7 +46,7 @@
       <div class="container mt-5">
         <div class="row about-container">
           <div class="col-md-8 hidden" data-cssclass="text-bounce-right">
-            <img src="/images/portfolio.jpg?as=webp" alt="" />
+            <img src="/images/portfolio.jpg?as=webp" alt="Alexander Schad" />
           </div>
           <div class="col-md-4 hidden" data-cssclass="text-bounce-left">
             <p>
@@ -74,41 +75,41 @@
           <div class="skill flex col-md-3">
             <div class="skill-wrapper p-4">
               <div class="img-container">
-                <img src="/images/javascript.png" alt="" />
+                <img src="/images/javascript.png" alt="Javascript" />
               </div>
-              <h4>Javascript</h4>
+              <h2>Javascript</h2>
             </div>
           </div>
           <div class="skill flex col-md-3">
             <div class="skill-wrapper p-4">
               <div class="img-container">
-                <img src="/images/typescript.png" alt="" />
+                <img src="/images/typescript.png" alt="Typescript" />
               </div>
-              <h4>Typescript</h4>
+              <h2>Typescript</h2>
             </div>
           </div>
           <div class="skill flex col-md-3">
             <div class="skill-wrapper p-4">
               <div class="img-container">
-                <img src="/images/react.png" alt="" />
+                <img src="/images/react.png" alt="React" />
               </div>
-              <h4>React</h4>
+              <h2>React</h2>
             </div>
           </div>
           <div class="skill flex col-md-3">
             <div class="skill-wrapper p-4">
               <div class="img-container">
-                <img src="/images/reactnative.png" alt="" />
+                <img src="/images/reactnative.png" alt="React Native" />
               </div>
-              <h4>React Native</h4>
+              <h2>React Native</h2>
             </div>
           </div>
           <div class="skill flex col-md-3">
             <div class="skill-wrapper p-4">
               <div class="img-container">
-                <img src="/images/nextjs.png" alt="" />
+                <img src="/images/nextjs.png" alt="NextJS" />
               </div>
-              <h4>NextJS</h4>
+              <h2>NextJS</h2>
             </div>
           </div>
           <div class="skill flex col-md-3">
@@ -116,55 +117,55 @@
               <div class="img-container">
                 <i class="fab fa-github fa-8x" aria-hidden="true"></i>
               </div>
-              <h4>GIT</h4>
+              <h2>GIT</h2>
             </div>
           </div>
           <div class="skill flex col-md-3">
             <div class="skill-wrapper p-4">
               <div class="img-container">
-                <img src="/images/html.png" alt="" />
+                <img src="/images/html.png" alt="HTML" />
               </div>
-              <h4>HTML5</h4>
+              <h2>HTML5</h2>
             </div>
           </div>
           <div class="skill flex col-md-3">
             <div class="skill-wrapper p-4">
               <div class="img-container">
-                <img src="/images/css.png" alt="" />
+                <img src="/images/css.png" alt="CSS" />
               </div>
-              <h4>CSS3</h4>
+              <h2>CSS3</h2>
             </div>
           </div>
           <div class="skill flex col-md-3">
             <div class="skill-wrapper wide-img p-3">
               <div class="img-container">
-                <img src="/images/jquery.png" alt="" />
+                <img src="/images/jquery.png" alt="JQuery" />
               </div>
-              <h4>JQuery</h4>
+              <h2>JQuery</h2>
             </div>
           </div>
           <div class="skill flex col-md-3">
             <div class="skill-wrapper wide-img p-3">
               <div class="img-container">
-                <img src="/images/python.png" alt="" />
+                <img src="/images/python.png" alt="Python" />
               </div>
-              <h4>Python</h4>
+              <h2>Python</h2>
             </div>
           </div>
           <div class="skill flex col-md-3">
             <div class="skill-wrapper p-4">
               <div class="img-container">
-                <img src="/images/postgres.png" alt="" />
+                <img src="/images/postgres.png" alt="Postgres" />
               </div>
-              <h4>Postgres</h4>
+              <h2>Postgres</h2>
             </div>
           </div>
           <div class="skill flex col-md-3">
             <div class="skill-wrapper p-4">
               <div class="img-container">
-                <img src="/images/graphql.png" alt="" />
+                <img src="/images/graphql.png" alt="GraphQL" />
               </div>
-              <h4>GraphQL</h4>
+              <h2>GraphQL</h2>
             </div>
           </div>
         </div>
@@ -183,8 +184,9 @@
         <div class="work flex col-md-4">
           <div class="work-wrapper">
             <div class="social-media">
-              <a href="mailto:schad_alexander@web.de"
-                ><i class="fa fa-envelope fa-8x" aria-hidden="true"></i></a
+              <a href="mailto:schad_alexander@web.de">
+                <i class="fa fa-envelope fa-8x" aria-hidden="true" title="Mail Me"></i>
+                <span class="sr-only">Mail Me</span></a
                 >
             </div>
           </div>
@@ -193,7 +195,8 @@
           <div class="work-wrapper">
             <div class="social-media">
               <a href="https://https://github.com/alexschad"
-                ><i class="fab fa-github fa-8x" aria-hidden="true"></i></a
+                ><i class="fab fa-github fa-8x" aria-hidden="true" title="My GitHub"></i>
+                <span class="sr-only">My GitHub</span></a
                 >
             </div>
           </div>
@@ -202,7 +205,7 @@
               <div class="work-wrapper">
                 <div class="social-media">
               <a href="https://www.linkedin.com/in/alexander-schad/"
-                ><img src="images/linkedin.png" /></a
+                ><img src="images/linkedin.png" alt="LinkedIn" /></a
                 >
             </div>
           </div>

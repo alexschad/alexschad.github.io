@@ -67,17 +67,20 @@ function ThingsIMade() {
       >
         <div className="work-wrapper">
           <div className="logo">
-            <img src={images[d.image.split(".")[0]][d.image.split(".")[1]]} />
+            <img
+              src={images[d.image.split(".")[0]][d.image.split(".")[1]]}
+              alt={d.title}
+            />
           </div>
           <div className="detail">
             {d.url !== "" ? (
-              <h4>
+              <h2>
                 <a href={d.url} target="_blank">
                   {d.title}
                 </a>
-              </h4>
+              </h2>
             ) : (
-              <h4>{d.title}</h4>
+              <h2>{d.title}</h2>
             )}
             {d.details}
             <div className="workfor">Made for {d.workfor}</div>
