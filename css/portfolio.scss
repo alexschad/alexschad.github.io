@@ -128,7 +128,7 @@ section {
 }
 
 #home {
-  background: url(../images/bg.png);
+  background: url(../images/bg.png?as=webp);
   background-color: black;
   background-size: cover;
   height: 100vh;
@@ -222,6 +222,15 @@ section > h1 {
 
 .skill-wrapper {
   min-width: 200px;
+  justify-content: flex-end;
+}
+
+.skill-wrapper > .img-container{
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: stretch;
+  align-items: center;
 }
 
 .skill-wrapper > img {
