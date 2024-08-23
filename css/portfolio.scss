@@ -132,7 +132,7 @@ section {
 }
 
 #home {
-  background: url(../images/bg.png?as=webp);
+  background: url(../images/bg_mobile.png?as=webp);
   background-color: black;
   background-size: cover;
   height: 100vh;
@@ -498,6 +498,10 @@ nav .active {
 }
 
 @media screen and (min-width: 600px) {
+  #home {
+    background: url(../images/bg.png?as=webp);
+  }
+  
   nav .nav-wrapper {
     background: none;
     height: initial;
