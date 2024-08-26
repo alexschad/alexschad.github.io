@@ -10,14 +10,207 @@
     <link rel="manifest" href="/favicon/site.webmanifest" />
     <script src="./js/portfolio.js" defer></script>
     <script src="./js/thingsimade.js" type="module" defer></script>
-    <link rel="stylesheet" href="/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/css/portfolio.scss" />
-    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
+    
+    <link rel="preload" href="/dist/bootstrap.min.css" as="style" fetchPriority="low" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/dist/bootstrap.min.css"></noscript>
+
+    <link rel="preload" href="/css/fontawesome-all.min.css" as="style" fetchPriority="low" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/fontawesome-all.min.css"></noscript>
+
+    <link rel="preload" href="/css/portfolio.scss" as="style" fetchPriority="low" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/portfolio.scss"></noscript>
+
+    <!-- <link rel="stylesheet" href="/css/fontawesome-all.min.css" defer /> -->
+
+    <!-- <link rel="stylesheet" href="/css/bootstrap.min.css" defer /> -->
+    <!-- <link rel="stylesheet" href="/css/portfolio.scss" defer /> -->
+    <!-- <style>
+      /*!
+      * Font Awesome Free 5.9.0 by @fontawesome - https://fontawesome.com
+      * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+      */
+      @font-face {
+        font-family: "Font Awesome 5 Brands";
+        font-style: normal;
+        font-weight: normal;
+        font-display: auto;
+        src: url("webfonts/fa-brands-400.eot");
+        src: url("webfonts/fa-brands-400.eot#iefix") format("embedded-opentype"), url("webfonts/fa-brands-400.woff2") format("woff2"), url("webfonts/fa-brands-400.woff") format("woff"), url("webfonts/fa-brands-400.ttf") format("truetype"), url("webfonts/fa-brands-400.svg#fontawesome") format("svg");
+      }
+
+      .fab {
+        font-family: "Font Awesome 5 Brands";
+      }
+
+      @font-face {
+        font-family: "Font Awesome 5 Free";
+        font-style: normal;
+        font-weight: 400;
+        font-display: auto;
+        src: url("webfonts/fa-regular-400.eot");
+        src: url("webfonts/fa-regular-400.eot#iefix") format("embedded-opentype"), url("webfonts/fa-regular-400.woff2") format("woff2"), url("webfonts/fa-regular-400.woff") format("woff"), url("webfonts/fa-regular-400.ttf") format("truetype"), url("webfonts/fa-regular-400.svg#fontawesome") format("svg");
+      }
+
+      .far {
+        font-weight: 400;
+      }
+
+      @font-face {
+        font-family: "Font Awesome 5 Free";
+        font-style: normal;
+        font-weight: 900;
+        font-display: auto;
+        src: url("webfonts/fa-solid-900.eot");
+        src: url("webfonts/fa-solid-900.eot#iefix") format("embedded-opentype"), url("webfonts/fa-solid-900.woff2") format("woff2"), url("webfonts/fa-solid-900.woff") format("woff"), url("webfonts/fa-solid-900.ttf") format("truetype"), url("webfonts/fa-solid-900.svg#fontawesome") format("svg");
+      }
+
+      .fa, .far, .fas {
+        font-family: "Font Awesome 5 Free";
+      }
+      .fa-arrow-down:before{content:"\f063"}
+      .fa-bars:before{content:"\f0c9"}
+      .fa-envelope:before{content:"\f0e0"}
+      .fa-github:before{content:"\f09b"}
+      .fa-2x{font-size:2em}
+      .fa-8x{font-size:8em}
+    </style> -->
+    <style>
+
+
+@font-face {
+  font-family: 'Bangers';
+  src: url('./Bangers-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+html,
+body {
+  background-color: black;
+  display: table;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+section {
+  min-height: 100vh;
+  background-color: white;
+  border-bottom: 1px solid black;
+  background-color: #efefef;
+}
+
+.full-wrapper {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.flex {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  display: inline;
+  color: aqua;
+}
+
+.text {
+  font-family: Bangers;
+  font-size: 3em;
+  color: wheat;
+  text-align: center;
+  width: 50vw;
+}
+
+.text-bounce-right,
+.text-bounce-left {
+  opacity: 0;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  animation-duration: 0.8s;
+}
+
+.text-bounce-right {
+  animation-name: text-bounce-right;
+}
+
+.text-bounce-left {
+  animation-name: text-bounce-left;
+}
+
+@keyframes text-bounce-right {
+  0% {
+    opacity: 0.2;
+    transform: translateX(-200px);
+  }
+  60% {
+    opacity: 0.7;
+    transform: translateX(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes text-bounce-left {
+  0% {
+    opacity: 0.2;
+    transform: translateX(200px);
+  }
+  60% {
+    opacity: 0.7;
+    transform: translateX(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.delay {
+  animation-delay: 0.5s;
+}
+
+#home {
+  background: url(./images/bg_mobile.png?as=webp);
+  background-color: black;
+  background-size: cover;
+  height: 100vh;
+}
+
+#down-button {
+        color: wheat;
+        border: 3px solid wheat;
+        border-radius: 50%;
+        margin-top: 1em;
+        font-size: 3rem;
+        width: 2em;
+        height: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;      
+      }
+
+      #down-button svg {
+        height: 1em;
+        width: 1em;
+        fill: wheat;
+        vertical-align: -0.125em;
+      }
+      #down-button:hover svg {
+        fill: black;
+      }
+
+    </style>
   </head>
   <body>
     <section id="home">
       <div class="full-wrapper flex">
-        <div class="text">
+        <div class="text">&nbsp;
           <div class="text-bounce-right">
             I'm
             <div class="name">Alex</div>
@@ -25,7 +218,9 @@
           </div>
           <div class="text-bounce-left">A web developer.</div>
         </div>
-        <div id="down-button" class="button grow fas fa-arrow-down"></div>
+        <div id="down-button" class="button grow">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.<path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
+        </div>
       </div>
     </section>
     <nav class="flex">
