@@ -70,6 +70,8 @@ function ThingsIMade() {
             <img
               src={images[d.image.split(".")[0]][d.image.split(".")[1]]}
               alt={d.title}
+              width="150"
+              height="150"
             />
           </div>
           <div className="detail">

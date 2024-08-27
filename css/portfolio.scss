@@ -19,6 +19,11 @@
   --color4-3: white;
 }
 
+img {
+  width: 100%; /* or max-width: 100%; */
+  height: auto;
+}
+
 h2 {
   font-size: 1.5rem;
 }
@@ -395,6 +400,21 @@ nav .active {
   color: #fed128;
 }
 
+.icon svg {
+  height: 1.5em;
+  width: 1.5em;
+  fill: white;
+}
+
+.img-container, .social-media svg {
+  height: 8em;
+  width: 8em;
+  fill: black;
+}
+
+svg.mailme {
+  fill: #027bff;
+}
 @media screen and (min-width: 600px) {
   #home {
     background: url(../images/bg.png?as=webp);
